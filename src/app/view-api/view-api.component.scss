@@ -1,0 +1,70 @@
+
+.container{
+    display: flex;
+    flex-direction: column;
+
+
+    .card-container{
+        display: grid;    
+        grid-template-columns: repeat(auto-fill,minmax(15rem,1fr));
+        grid-gap:10px;
+        padding: 50px;
+       
+
+
+        .card{
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            box-shadow: 0 0 10px lightgray;
+            padding: 10px;
+            position: relative;
+            cursor: pointer;
+            transition: margin .3s ease ;
+           
+
+            .Alive{
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background-color: rgb(39, 251, 106);
+                border-radius: 50px;
+                right: 10px;
+            }
+            .unknown{
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background-color: rgb(162, 159, 159);
+                border-radius: 50px;
+                right: 10px;
+            }
+            .Dead{
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background-color: rgb(243, 22, 22);
+                border-radius: 50px;
+                right: 10px;
+            }
+            .img{
+                img{
+                    width: 100%;
+                    border-radius: 10px;
+                }
+            }
+        }
+        .card:hover{
+            margin: -2px;            
+          }
+    }
+
+    
+
+    .buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        gap:10px;        
+     }
+}
