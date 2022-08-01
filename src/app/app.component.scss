@@ -4,14 +4,22 @@
 }
 .header{
     display: flex;
-    justify-content: center;
-    align-content: center;  
+    justify-content: space-around;
+    align-items: center;  
+    padding: 10px;
 
     h1{
-        font-family:rickandmortyfont ;
+        font-family:rickandmortyfont;
         font-size: 2rem;
         margin-top: 20px;    
     }
+    img{
+        width: 50px;
+    }
 }
 
-// get_schwifty
+@media screen and (max-width: 800px) {
+        .header{
+            flex-direction: column;            
+        }
+}

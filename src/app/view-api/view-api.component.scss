@@ -7,7 +7,7 @@
     .card-container{
         display: grid;    
         grid-template-columns: repeat(auto-fill,minmax(15rem,1fr));
-        grid-gap:10px;
+        grid-gap:20px;
         padding: 50px;
        
 
@@ -20,6 +20,7 @@
             position: relative;
             cursor: pointer;
             transition: margin .3s ease ;
+            background: white;
            
 
             .Alive{
@@ -56,6 +57,25 @@
         .card:hover{
             margin: -2px;            
           }
+
+        //   .glow::after,.glow::before{
+        //     content: '';
+        //     position:absolute;
+        //     left: -5px;
+        //     top:-5px;
+        //     background: linear-gradient(45deg, rgb(246, 246, 117),rgb(248, 208, 134),rgb(192, 246, 192), rgb(209, 237, 246),rgb(241, 7, 241),
+        //     rgb(241, 208, 213),rgb(235, 164, 235),rgb(238, 53, 53), rgb(54, 54, 244));
+        //     background-size: 100%;
+        //     height: calc(100% + 10px);
+        //     width: calc(100% + 10px);
+        //     z-index: -1;
+        //     animation: rotate 20s linear infinite;
+        //     border-radius: 10px;
+        //   }
+        //   .glow::after{
+        //     filter: blur(7px);
+        //   }
+         
     }
 
     
@@ -67,4 +87,19 @@
         margin-bottom: 20px;
         gap:10px;        
      }
+
+
+     
 }
+
+@keyframes rotate {
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 1600px 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+ }
