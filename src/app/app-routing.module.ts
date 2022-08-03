@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ViewApiComponent } from './view-api/view-api.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'api',pathMatch:'full'},
-  { path: 'api', loadChildren: () => import('./view-api/view-api.module').then(m => m.ViewApiModule) }
+  {path:'',component:ViewApiComponent},
+ 
 ];
 
 @NgModule({

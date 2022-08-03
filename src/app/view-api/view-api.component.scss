@@ -2,25 +2,26 @@
 .container{
     display: flex;
     flex-direction: column;
-
+    padding: 10px;
+    background-color: #141212;
 
     .card-container{
         display: grid;    
         grid-template-columns: repeat(auto-fill,minmax(15rem,1fr));
-        grid-gap:20px;
+        grid-gap:30px;
         padding: 50px;
        
 
 
         .card{
-            border: 1px solid lightgray;
+            // border: 1px solid lightgray;
             border-radius: 10px;
-            box-shadow: 0 0 10px lightgray;
+            // box-shadow: 0 0 10px lightgray;
             padding: 10px;
             position: relative;
-            cursor: pointer;
-            transition: margin .3s ease ;
-            background: white;
+            cursor: default;
+            // transition: margin .3s ease ;
+            background: rgb(238, 235, 235);
            
 
             .Alive{
@@ -49,37 +50,16 @@
             }
             .img{
                 img{
-                    width: 100%;
+                    width: 90%;
                     border-radius: 10px;
                 }
             }
         }
         .card:hover{
-            margin: -2px;            
-          }
-
-        //   .glow::after,.glow::before{
-        //     content: '';
-        //     position:absolute;
-        //     left: -5px;
-        //     top:-5px;
-        //     background: linear-gradient(45deg, rgb(246, 246, 117),rgb(248, 208, 134),rgb(192, 246, 192), rgb(209, 237, 246),rgb(241, 7, 241),
-        //     rgb(241, 208, 213),rgb(235, 164, 235),rgb(238, 53, 53), rgb(54, 54, 244));
-        //     background-size: 100%;
-        //     height: calc(100% + 10px);
-        //     width: calc(100% + 10px);
-        //     z-index: -1;
-        //     animation: rotate 20s linear infinite;
-        //     border-radius: 10px;
-        //   }
-        //   .glow::after{
-        //     filter: blur(7px);
-        //   }
-         
+            animation: pulse .2s ease-out;  
+            box-shadow: 0 0 10px rgb(59, 59, 248),0 0 50px rgb(88, 88, 246) ;     
+          }        
     }
-
-    
-
     .buttons{
         display: flex;
         justify-content: center;
@@ -92,14 +72,21 @@
      
 }
 
-@keyframes rotate {
+@keyframes pulse {
     0%{
-        background-position: 0 0;
+       transform: scale(1.03);
+       box-shadow: 0 0 20px rgb(112, 112, 244),0 0 40px rgb(88, 88, 246) ;   
     }
     50%{
-        background-position: 1600px 0;
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgb(112, 112, 244),0 0 40px rgb(88, 88, 246) ;   
+    }
+    75%{
+        transform: scale(1.03);
+        box-shadow: 0 0 20px rgb(112, 112, 244),0 0 40px rgb(88, 88, 246) ;   
     }
     100%{
-        background-position: 0 0;
+        transform: scale(1);
+        box-shadow: 0 0 20px rgb(0, 0, 255),0 0 40px rgb(88, 88, 246) ;   
     }
  }
